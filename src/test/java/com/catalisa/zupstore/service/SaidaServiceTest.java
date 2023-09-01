@@ -42,10 +42,9 @@ public class SaidaServiceTest {
     public void testBuscarTodos() {
         List<SaidaModel> saidas = new ArrayList<>();
 
-        // Configurar uma saída de exemplo
         SaidaModel saidaTeste = new SaidaModel();
         saidaTeste.setId(1L);
-        // ... configurar os atributos da saída de exemplo
+
         saidas.add(saidaTeste);
 
         when(saidaRepository.findAll()).thenReturn(saidas);
@@ -59,10 +58,8 @@ public class SaidaServiceTest {
     public void testBuscarPorId() {
         Long saidaId = 1L;
 
-        // Configurar uma saída de exemplo
         SaidaModel saida = new SaidaModel();
         saida.setId(1L);
-        // ... configurar os atributos da saída de exemplo
 
         when(saidaRepository.findById(saidaId)).thenReturn(Optional.of(saida));
 
@@ -83,7 +80,6 @@ public class SaidaServiceTest {
         produto1.setCategoria(categoriaModel);
         produto1.setQuantidadeAtual(100);
 
-        // Configurar uma saída de exemplo
         SaidaModel saidaTeste = new SaidaModel();
         saidaTeste.setId(1L);
         saidaTeste.setProduto(produto1);
@@ -101,14 +97,11 @@ public class SaidaServiceTest {
     public void testAlterar() {
         Long saidaId = 1L;
 
-        // Configurar uma saída original e uma saída atualizada de exemplo
         SaidaModel saidaOriginal = new SaidaModel();
         saidaOriginal.setId(1L);
-        // ... configurar os atributos da saída original
 
         SaidaModel saidaAtualizada = new SaidaModel();
         saidaAtualizada.setId(1L);
-        // ... configurar os atributos da saída atualizada
 
         when(saidaRepository.findById(saidaId)).thenReturn(Optional.of(saidaOriginal));
         when(saidaRepository.save(any(SaidaModel.class))).thenReturn(saidaAtualizada);
@@ -137,7 +130,6 @@ public class SaidaServiceTest {
         produtoModel.setPreco(999.99);
         produtoModel.setCategoria(categoriaModel);
 
-        // Configurar uma saída de exemplo
         SaidaModel saidaModel = new SaidaModel();
         saidaModel.setProduto(produtoModel);
         saidaModel.setQuantidade(5);
@@ -155,8 +147,5 @@ public class SaidaServiceTest {
 
         assertEquals(5, saidaDTO.getQuantidade());
     }
-
-    // ... adicionar outros métodos de teste se necessário
-
 }
 

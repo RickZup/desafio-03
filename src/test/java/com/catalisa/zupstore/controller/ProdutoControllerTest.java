@@ -39,7 +39,6 @@ public class ProdutoControllerTest {
         produto1.setId(1L);
         produto1.setNome("Produto 1");
         produto1.setPreco(50.0);
-        // ... configurar outros atributos do produto1
 
         ProdutoDTO dto1 = new ProdutoDTO();
         dto1.setNome("Produto 1");
@@ -106,7 +105,6 @@ public class ProdutoControllerTest {
         produtoModel.setId(1L);
         produtoModel.setNome("Produto Novo");
         produtoModel.setPreco(50.0);
-        // ... configurar outros atributos do produtoModel
 
         when(produtoService.cadastrar(Mockito.any(ProdutoModel.class))).thenReturn(produtoModel);
 
@@ -129,7 +127,6 @@ public class ProdutoControllerTest {
         produtoModel.setId(produtoId);
         produtoModel.setNome("Produto Atualizado");
         produtoModel.setPreco(75.0);
-        // ... configurar outros atributos do produtoModel
 
         when(produtoService.alterar(eq(produtoId), Mockito.any(ProdutoModel.class))).thenReturn(produtoModel);
 

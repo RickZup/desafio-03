@@ -30,7 +30,6 @@ public class EntradaService {
 
     public EntradaModel cadastrarEntrada(EntradaModel entradaModel) {
 
-        //Lógica que atualiza o atributo quantidadeAtual do produto
         ProdutoModel produto = entradaModel.getProduto();
         produto.setQuantidadeAtual(produto.getQuantidadeAtual() + entradaModel.getQuantidade());
         produtoService.alterar(produto.getId(), produto);

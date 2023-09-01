@@ -48,7 +48,6 @@ public class EntradaControllerTest {
         produto1.setNome("Produto 1");
         produto1.setPreco(50.0);
         produto1.setCategoria(categoriaModel);
-        // ... configurar outros atributos do produto1
 
         ProdutoDTO dto1 = new ProdutoDTO();
         dto1.setNome("Produto 1");
